@@ -10,6 +10,7 @@
     border: none;
     outline: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     background: #f9f9f9;
@@ -62,20 +63,35 @@ hr {
     margin: 20px 0;
 }
 
+html::-webkit-scrollbar {
+  width: 11px;
+  background: #b2e5f6;
+}
+html::-webkit-scrollbar-thumb {
+  background: #b67eff;
+}
+
+.scrolledit::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #c3c6c7;
+}
+.scrolledit::-webkit-scrollbar-thumb {
+  background: #b67eff;
+}
 
 /* --- [ Header ] - start ---*/
 .header {
     background-color: #e0e2e2;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 .navbar {
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.116);
+    z-index: 1000;
     width: 100%;
-    height: 45px;
-    top: 5vh;
+    height: 65px;
+    top: 2vh;
     padding: 0 3%;
     position: absolute;
 }
@@ -96,8 +112,23 @@ hr {
     height: 95%;
     margin-right: 7%;
 }
-.navbar .navbar-menu td {
-    font-size: 22px;
+.navbar .navbar-menu .icon-navbar {
+    display: none;
+    position: relative;
+    color: #fff;
+    font-size: 1.7em;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    background-color: #7f86d5;
+    border-radius: 100%;
+}
+.navbar .navbar-menu .icon-navbar .fa-bars {
+    margin: auto;
+}
+.navbar .navbar-menu li {
+    display: inline-flex;
+    font-size: 1.4em;
     font-weight: 300;
     padding: 0 15px;
     text-transform: uppercase;
@@ -114,7 +145,8 @@ hr {
     justify-content: center;
     float: left;
     align-items: center;
-    width: 46.5vw;
+    width: 43%;
+    min-width: 350px;
     height: 110vh;
     background: url("../images/componentes/back-left-header.png");
     background-position: center;
@@ -136,7 +168,7 @@ hr {
 .ceo .foto-ceo {
     position: relative;
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     height: 80%;
 }
 .foto-ceo img {
@@ -145,18 +177,18 @@ hr {
     object-fit: contain;
 }
 .text-ceo {
-    position: relative;
     text-align: center;
     text-transform: uppercase;
+    width: ;
 }
 .text-ceo h2 {
-    font-size: 2.2vw;
+    font-size: calc(20px + (8.5/1200) * 100 * 1vw);
     color: #4c4b4b;
     font-weight: bold;
-    padding-bottom: 4%;
+    margin-bottom: 4%;
 }
 .text-ceo span {
-    font-size: 1.5vw;
+    font-size: calc(13px + (8/1200) * 100 * 1vw);
     font-weight: 300;
     color: #4c4b4b;
 }
@@ -165,60 +197,387 @@ hr {
     z-index: 1;
     position: relative;
     float: right;
-    width: 65%;
+    width: 67%;
     height: 100.5%;
     background: url("../images/componentes/escritorio-header.png");
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.header .btn-header {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    top: 90vh;
+    font-size: 40pt;
+    text-align: center;
+}
+.btn-header a {
+    color: #352bf8b2;
+}
+.btn-header a:hover {
+    color: #7972fab2;
+}
 /* --- [ Header ] - end ---*/
 
+/* --- [ Blog ] - start ---*/
 .blog {
     width: 100%;
-    height: 100vh;
-    background-color: #f3eded;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 3%;
 }
+.blog .title-blog {
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+    text-align: center;
+    color: #454040;
+    text-overflow: ellipsis;
+}
+.title-blog h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0.5%;
+}
+.title-blog p {
+    font-size: 1.1em;
+}
+.blog .posts-blog {
+    position: relative;
+    width: 100%;
+    margin-top: 4%;
+}
+.posts-1 {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    place-content: center;
+    flex-wrap: wrap;
+    display: none;
+    margin-top: 2%;
+}
+.posts-1 .btn-blog-1 {
+    position: absolute;
+    display: inline-flex;
+    place-self: center;
+    width: 95vw;
+    height: auto;
+    font-size: 40px;
+    justify-content: space-between;
+}
+.btn-blog-1 a {
+    color: #b0acfcb2;
+}
+.posts-1 .article-blog-1 {
+    background-color: #ffffff;
+    width: 270px;
+    height: 342px;
+    margin: 3% 1%;
+    overflow: hidden;
+}
+.article-blog-1 .image-article-blog {
+    display: grid;
+}
+.article-blog-1 .image-article-blog img {
+}
+.article-blog-1 .title-article-blog {
+    background-color: #9a95fa;
+    width: 100%;
+    height: 17.5%;
+    padding: 2.5% 5%;              
+    overflow: hidden;
+}
+.article-blog-1 .title-article-blog h3 {
+    font-size: 18px;
+    font-weight: 300 ;
+    color: #fff;
+    text-transform: uppercase;
+}
+.article-blog-1 .text-article-blog {
+    padding: 3% 8%;
+    width: 100%;
+    height: 100%;
+}
+.article-blog-1 .text-article-blog p {
+    font-size: 16px;
+
+}
+.posts-2 {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    place-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.posts-2 .article-blog-2 {
+    background-color: #e9e7e7;
+    position: relative;
+    width: 510px;
+    height: 400px;
+    padding: 10px 20px;
+    margin: auto 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.posts-2 .notice-blog-2 {
+    width: auto;
+    height: 87%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.posts-2 .notice-blog-2:hover .date-article {
+    visibility: visible;
+}
+.posts-2 .notice-blog-2:hover .text-article-blog {
+    bottom: 0;
+}
+.notice-blog-2 .date-article {
+    right: 10px;
+    top: 1px;
+    float: right;
+    position: absolute;
+    visibility: hidden;
+}
+.notice-blog-2 .date-article span {
+    font-size: 14px;
+}
+.notice-blog-2 .date-article span .fa-clock {
+    font-size: 12px;
+}
+.notice-blog-2 .image-article-blog {
+    display: grid;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.notice-blog-2 .image-article-blog img {
+    object-fit: cover;
+}
+.notice-blog-2 .text-article-blog {
+    position: absolute;
+    bottom: -190px;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease;
+}
+.text-article-blog .title-article-blog {
+    background: #9a95face;
+    width: 100%;
+    height: auto;
+    padding: 10px 3%;              
+    overflow: hidden;
+}
+.text-article-blog .title-article-blog h3 {
+    color: #fff;
+    font-size: calc(15px + (10/1200) * 100 * 1vw);
+    margin: auto 0;
+}
+.text-article-blog .paragrafo-article-blog {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    padding: 10px 20px;
+    background-color: #ffffffe1;
+}
+.paragrafo-article-blog p {
+    font-size: 18px;
+}
+.article-blog-2 .btn-article-blog-2 {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.article-blog-2 .btn-article-blog-2 .select-btn-article {
+    margin: 0 7px;
+    width: 12px;
+    height: 12px;
+    background-color: #9682ee;
+    cursor: pointer;
+}
+.article-blog-2 .btn-article-blog-2 .select-btn-article-active {
+    margin: 0 7px;
+    width: 12px;
+    height: 12px;
+    background-color: #e05f5f;
+    cursor: pointer;
+}
+.btn-article-blog-2 .select-btn-article:hover {
+    background-color: #e05f5f;
+}
+.posts-2 .box-article {
+    background-color: #e9e7e7;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    padding: 10px;
+}
+.box-article .scrolledit {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 5px;
+}
+.box-article .article-box {
+    width: 100%;
+    height: 27%;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    padding: 2% 0;
+    border-bottom: 1px #4c4b4b9f solid;
+    cursor: pointer;
+}
+.box-article .article-box:hover {
+    background-color: #9a95fa7c;
+}
+.box-article .article-box:hover .date-article {
+    visibility: visible;
+}
+.article-box .date-article {
+    right: 10px;
+    top: 3px;
+    float: right;
+    position: absolute;
+    visibility: hidden;
+}
+.article-box .date-article span {
+    font-size: 14px;
+}
+.article-box .date-article span .fa-clock {
+    font-size: 12px;
+}
+.article-box .image-article-blog {
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    padding-left: 5px;
+}
+.article-box .image-article-blog img {
+    object-fit: cover;
+}
+.article-box .text-article-blog {
+    width: 75%;
+    margin: 5px 0 5px 17px;
+    overflow: hidden;
+}
+.article-box .text-article-blog h4 {
+    margin-bottom: 5px;
+    padding-right: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.article-box .text-article-blog p {
+    font-size: 16px;
+    height: 55%;
+    overflow: hidden;
+}
+/* --- [ Blog ] - end ---*/
+
+
+/* --- [ Portfolio ] - start ---*/
+.portfolio {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #e9e7e7;
+    padding: 3%;
+}
+.portfolio .title-portfolio {
+    width: 100%;
+    height: auto;
+    margin-top: o;
+    text-align: center;
+    color: #454040;
+    text-overflow: ellipsis;
+}
+.title-portfolio h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0.5%;
+}
+.title-portfolio p {
+    font-size: 1.1em;
+}
+.navbar-portfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.navbar-portfolio ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+.navbar-portfolio ul li {
+    margin: 5px 10px;
+    padding: 7px 15px;
+    background-color: #9682ee;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.navbar-portfolio ul li:hover {
+    background-color: #e05f5f;
+}
+.portfolio .itens-portfolio {
+    width: 100%;
+    height: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4%;
+}
+.itens-portfolio .item-portfolio {
+    width: 250px;
+    margin: 0 2%;
+    margin-bottom: 3%;
+}
+/* --- [ Portfolio ] - end ---*/
 
 
 
-
-
-
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
+    /* --- [ Header Mobile ] - start ---*/
     .header {
         background-color: transparent;
     }
 
-    .navbar {
-        z-index: 3;
-        background-color: #9a95fa;
-        width: 100%;
-        height: 65px;
-        top: 0;
-        padding: 0 3%;
-        position: absolute;
-    }
-    .navbar .navbar-menu table {
-        display: none;
-    }
-    .navbar-menu {
-        background: url();
-    }
-
     .header .header-l {
         position: absolute;
-        width: 100vw;
-        height: 100vh;
+        min-width: 100%;
+        height: 80vh;
         background: transparent;
-        background-image: linear-gradient(#ced1d1, #ced1d1, #ced1d16b);
+        background-image: linear-gradient(#e9ebeb, #e9ebeb, #ced1d16b);
     }
     .header-l .ceo{
         padding: 3%;
         position: absolute;
+        width: 90%;
         max-height: 100%;
         margin: 0;
-        margin-top: -5vh;
+        margin-top: 10vh;
+    }
+    .text-ceo h2 {
+        font-size: 140%;
+    }
+    .text-ceo span {
+        font-size: 100%;
     }
     
     .header .header-r {
@@ -228,4 +587,29 @@ hr {
         width: 100vw;
         height: 100.5%;
     }
+    /* --- [ Header Mobile ] - end ---*/
+}
+
+@media only screen and (max-width: 830px) {
+    /* --- [ Navbar Mobile ] - start ---*/
+    .navbar {
+        z-index: 3;
+        background-color: #9a95fa;
+        width: 100%;
+        height: 85px;
+        top: 0;
+        padding: 0 3%;
+        position: absolute;
+    }
+    .navbar .navbar-menu {
+        background: transparent;
+        margin-right: 0;
+    }
+    .navbar .navbar-menu ul {
+        display: none;
+    }
+    .navbar .navbar-menu .icon-navbar {
+        display: flex;
+    }
+    /* --- [ Navbar Mobile ] - end ---*/
 }
