@@ -1003,7 +1003,7 @@ hr {
     .portfolio .itens-portfolio {
         width: 100%;
         margin-top: 2%;
-        margin-bottom: 10%;
+        margin-bottom: 20px;
         padding: 10% 0;
         display: -webkit-inline-box;
         flex-wrap: nowrap;
