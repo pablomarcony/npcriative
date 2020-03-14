@@ -486,7 +486,7 @@ html::-webkit-scrollbar-thumb {
 .box-article .scrolledit {
     width: 100%;
     height: 100%;
-    overflow: visible;
+    overflow: auto;
     padding-right: 0.5%;
 }
 .box-article .article-box-bg {
