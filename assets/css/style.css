@@ -838,6 +838,7 @@ hr {
     font-size: 17px;
     background-color: #fffdfd00;
     border: solid 2px var(--cor-padrao);
+    border-radius: 0px;
 }
 .corpo-contato-r button {
     width: 30%;
