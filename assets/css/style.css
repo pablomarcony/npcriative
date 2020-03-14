@@ -992,6 +992,31 @@ hr {
     .navbar .navbar-menu .icon-navbar {
         display: flex;
     }
+    /* --- [ Navbar Mobile ] - end ---*/
+
+    /* --- [ Portfolio Mobile ] - start --- */
+    .portfolio .itens-portfolio {
+        width: 100%;
+        margin-top: 2%;
+        padding: 10% 0;
+        display: -webkit-inline-box;
+        flex-wrap: nowrap;
+        overflow: auto;
+    }
+    .itens-portfolio .item-portfolio {
+        width: 90%;
+        margin: 0 5vw 0 0;
+        cursor: pointer;
+    }
+    .item-portfolio:hover img {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    /* --- [ Portfolio Mobile ] - end --- */
+
     /* --- [ Contato Mobile ] = start --- */
     .title-blog h2 {
         margin-top: 40px;
