@@ -488,6 +488,7 @@ html::-webkit-scrollbar-thumb {
     height: 100%;
     overflow: auto;
     padding-right: 0.5%;
+    -webkit-overflow-scrolling: touch;
 }
 .box-article .article-box-bg {
     width: 100%;
