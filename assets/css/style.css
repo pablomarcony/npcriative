@@ -839,6 +839,8 @@ hr {
     background-color: #fffdfd00;
     border: solid 2px var(--cor-padrao);
     border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
 }
 .corpo-contato-r button {
     width: 30%;
