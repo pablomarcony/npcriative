@@ -804,7 +804,7 @@ hr {
     border: solid 2px var(--cor-padrao);
     margin-top: 4px;
     border-radius: 0px;
-    -webkit-border-radius: 0px; 
+    -webkit-border-radius: 0px;
 }
 .corpo-contato-l button {
     width: 35%;
@@ -844,6 +844,7 @@ hr {
     border: solid 2px var(--cor-padrao);
     border-radius: 0px;
     -webkit-border-radius: 0px;
+    -webkit-box-shadow: none;
 }
 .corpo-contato-r button {
     width: 30%;
