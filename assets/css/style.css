@@ -297,8 +297,7 @@ hr {
 }
 .blog .title-blog {
     width: 100%;
-    height: 11%;
-    margin-top: 1%;
+    height: 90px;
     text-align: center;
     color: #454040;
     text-overflow: ellipsis;
@@ -317,8 +316,8 @@ hr {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: calc(100% - 14%);
-    margin-top: 3%;
+    height: calc(100% - 100px);
+    margin-top: 20px;
     padding-bottom: 30px;
 }
 .posts-1 {
@@ -895,7 +894,6 @@ hr {
     
     /* --- [ Geral ] - start ---*/
     .title-blog h2, .title-portfolio h2, .title-contato h2 {
-        font-size: 13vw;
         margin-top: 20px !important;
     }
     .title-blog p, .title-portfolio p, .title-contato p {
@@ -997,6 +995,10 @@ hr {
 
     
     /* --- [ Blog Mobile ] - start --- */
+    .blog {
+        height: auto;
+        min-height: 100vh;
+    }
     .posts-2 .article-blog-2 {
         display: none;
     }
@@ -1005,12 +1007,6 @@ hr {
         height: 510px;
     }
     /* --- [ Blog Mobile ] - end --- */
-
-    /* --- [ Contato Mobile ] = start --- */
-    .title-blog h2 {
-        margin-top: 40px;
-    }
-    /* --- [ Navbar Mobile ] - end ---*/
     
     /* --- [ Contato Mobile ] = start --- */
     .contato {
