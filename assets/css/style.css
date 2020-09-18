@@ -317,7 +317,7 @@ hr {
     justify-content: center;
     width: 100%;
     height: calc(100% - 100px);
-    margin-top: 20px;
+    margin-top: 40px;
     padding-bottom: 30px;
 }
 .posts-1 {
@@ -381,13 +381,13 @@ hr {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    padding: 0 2%;
+    padding: 0 4%;
 }
 .posts-2 .article-blog-2 {
     position: relative;
-    width: 60%;
+    width: 55%;
     height: 90%;
-    margin: 1% 2% 2% 0;
+    margin: 1% 4% 2% 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -481,9 +481,12 @@ hr {
 .btn-article-blog-2 .select-btn-article:hover {
     background-color: #bb3939;
 }
+.btn-article-blog-2 .select-btn-article:active {
+    background-color: #af3030;
+}
 .posts-2 .box-article {
     border: 1px solid var(--cor-padrao);
-    width: 40%;
+    width: 45%;
     height: 90%;
     margin: 1% 0 2%;
     overflow: hidden;
@@ -614,6 +617,9 @@ hr {
 }
 .navbar-portfolio ul li:hover {
     background-color: #bb3939;
+}
+.navbar-portfolio ul li:active {
+    background-color: #af3030;
 }
 .portfolio .itens-portfolio {
     max-width: 1200px;
@@ -784,6 +790,16 @@ hr {
     justify-content: space-around;
     align-items: center;
 }
+.corpo-contato button:hover {
+    background-color: #bb3939;
+}
+.corpo-contato button:active {
+    background-color: #af3030;
+}
+.corpo-contato textarea:focus, .corpo-contato input:focus {
+    background-color: #fafafa;
+    border: solid 2px #bb3939;
+}
 .corpo-contato .corpo-contato-l {
     width: 100%;
     display: flex;
@@ -866,6 +882,16 @@ hr {
     cursor: pointer;
     color: white;
     background-color: var(--cor-padrao);
+}
+.corpo-contato-r form:hover > input {
+    border-right: solid 2px #bb3939 !important;
+}
+.corpo-contato-r form input:hover {
+    border-right: solid 2px var(--cor-padrao) !important;
+}
+.corpo-contato-r input:focus {
+    border: solid 2px #bb3939;
+    border-right: solid 2px var(--cor-padrao) !important;
 }
 /* --- [ Contato ] - end ---*/
 
